@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
+  const baseURL= "https://api.exchangeratesapi.io/latest";
+
+  useEffect( async () =>
+  {
+    
+    getCurrency();
+  }, []);
+
+  const getCurrency =  async () => {
+    const response  = await fetch (baseURL);
+    const Currency = await response.json();
+
+    console.log(Currency);
+  }
+ 
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form className="ConvertCurrs">
+        <select className="Curr1">
+          <option>EUR</option>
+        </select>
+        <button className="convertBtn" type="submit">Convert</button>
+      </form>
     </div>
   );
-}
+};
 
 export default App;
