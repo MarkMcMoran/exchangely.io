@@ -1,20 +1,21 @@
 import React from 'react';
-import { Container, Button, Card, Dropdown } from 'react-bootstrap';
+import { Container, Button, Card, Dropdown, FormControl} from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export class Conversion extends React.Component {
-
     render (){
-        
-       return (
+        const calc = () => {
+            
+        };
+        return (
     <Container>
             <Card variant="primary">
     <Card.Body>
     <Card.Title>Convertly.io</Card.Title>
     <Card.Text> A React application using exchangeratesapi.io API to convert currencies.</Card.Text>
     <Dropdown >
-        <Dropdown.Toggle variant="danger" >
+        <Dropdown.Toggle variant="danger">
         Select Currency
         </Dropdown.Toggle>
         <Dropdown.Menu>
@@ -24,8 +25,8 @@ export class Conversion extends React.Component {
             </Dropdown.Item>)}
         </Dropdown.Menu>
     </Dropdown>  
-        <br></br>
-        <Button variant="danger" size="sm" id="convertClick">Convert</Button>
+     <FormControl></FormControl>
+        <Button onClick={calc}variant="danger" size="sm" id="convertClick">Convert</Button>
         </Card.Body>
     </Card>
     </Container>
@@ -33,4 +34,5 @@ export class Conversion extends React.Component {
     }
     
 }
+
 export default Conversion;
