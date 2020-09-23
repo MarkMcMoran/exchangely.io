@@ -1,14 +1,18 @@
 import React from 'react';
+import {render } from 'react-dom';
+
 import './App.css';
 import SetConversion from './SetConversion';
 
-function App() {
+class App extends React.Component{
 
-  return (
+  render (){
+    return (
     <div className="App">
-      <SetConversion />
-    </div>
-  );
+ <SetConversion  />
+    </div>);
+  }
 };
 
+render(<App />, window.document.getElementById('root'));
 export default App;

@@ -7,7 +7,6 @@ const baseURL= "https://api.exchangeratesapi.io/latest";
 
 const[currencies, setCurrencies] = useState([]);
 
-
 useEffect(() => {
   getCurrency();
 }, []);
@@ -26,16 +25,11 @@ useEffect(() => {
       }))
     : [];
 
-    console.log(ratesArray[1]);
-
-    return (
-        <div>
-            <>
-<Conversion /> 
-</>
-         </div>
-    
-
+    return ( 
+        
+        <Conversion currencySymbol={ratesArray}/>
     )
 }
+
+
 export default SetConversion;

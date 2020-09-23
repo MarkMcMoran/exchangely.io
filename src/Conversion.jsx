@@ -1,34 +1,36 @@
 import React from 'react';
-
 import { Container, Button, Card, Dropdown } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-export default function Conversion () {
+export class Conversion extends React.Component {
 
-
-    return (
-     <Container>
+    render (){
+        
+       return (
+    <Container>
             <Card variant="primary">
     <Card.Body>
     <Card.Title>Convertly.io</Card.Title>
     <Card.Text> A React application using exchangeratesapi.io API to convert currencies.</Card.Text>
-
     <Dropdown >
         <Dropdown.Toggle variant="danger" >
         Select Currency
         </Dropdown.Toggle>
         <Dropdown.Menu>
-            <Dropdown.Item>EUR</Dropdown.Item>
-            <Dropdown.Item>GBP</Dropdown.Item>
-            <Dropdown.Item>USD</Dropdown.Item>
+            { this.props.currencySymbol.map(currency =>
+            <Dropdown.Item>
+              {currency.id}
+            </Dropdown.Item>)}
         </Dropdown.Menu>
-    </Dropdown>   
+    </Dropdown>  
         <br></br>
         <Button variant="danger" size="sm" id="convertClick">Convert</Button>
         </Card.Body>
-      </Card>
+    </Card>
     </Container>
-    );
-         
-};
+       );
+    }
+    
+}
+export default Conversion;
