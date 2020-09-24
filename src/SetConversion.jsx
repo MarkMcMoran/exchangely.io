@@ -17,7 +17,7 @@ useEffect(() => {
         setCurrencies(Currency);
         console.log(Currency.rates);
     }
- // Extracts json array from Object.
+ //Extracts json array from Object.
     const ratesArray = currencies.rates
     ? Object.entries(currencies.rates).map(([key, value]) => ({
         id: key,
@@ -26,7 +26,6 @@ useEffect(() => {
     : [];
 
     return ( 
-        
         <Conversion currencySymbol={ratesArray}/>
     )
 }
