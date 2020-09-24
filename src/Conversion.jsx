@@ -1,93 +1,84 @@
-import React from 'react';
-import { Container, Button, Card, Dropdown, FormControl} from 'react-bootstrap';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from 'react'
+import {Button, Card, Container, Dropdown, FormControl} from 'react-bootstrap'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.css'
+
+const titleApp = `Convertly.io`
+const desc = `${titleApp} a React application using exchangeratesapi.io API to convert currencies`
 
 export class Conversion extends React.Component {
-
-    constructor(props){
-
-        super(props);
-
-            this.state = {
-                currencySymbol: this.props.currencySymbol[0],
-              
-
-            //    value: this.props.currencySymbol[]
-            }
-            this.handleInputChange = this.handleInputChange.bind(this);
-            this.handleSubmission = this.handleSubmission.bind(this);
+    constructor(props) {
+        super(props)
+        // Starting off at -1 so I go through all indexes of the arr selectedCurr.
+        this.state = {
+            selectedCurr: -1,
+        }
+        this.handleSubmission = this.handleSubmission.bind(this)
     }
-
-    handleInputChange = (event) => {
-        console.log(`Hillo mr ${event}vent`);
-
-        this.setState({
-            currencySymbol: event.target.value
-            
-          
-        });
-       
-        console.log(`Target value is :${event.target.value}`);
-    }
-
 
     handleSubmission = (event) => {
-        event.preventDefault();
-        this.setState({
-
-            
-           // currencySymbol: this.state.currencySymbol[e.target]
-        })
-        alert(`Currency symbol is ${this.state.currencySymbol}`);
+        alert(`Currency symbol is ${this.state.selectedCurr}`)
+        event.preventDefault()
     }
-    
+    handleCalc = (event) => {
 
-    render (){
-    const titleApp = `Convertly.io`;
-    const desc = ` ${titleApp} a React application using exchangeratesapi.io API to convert currencies`;
-    
-    console.log(`The state boi: ${this.state}`);
+    }
 
-    return (
-        
-        <Container>
-            <Card variant="primary">
-                <Card.Body>
-    <Card.Title>{titleApp}</Card.Title>
-                    <Card.Text>
-                    { desc }
-                    </Card.Text>
-                <Dropdown >
-                    <Dropdown.Toggle variant="danger">
-                        Select Currency
-                    </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            { 
-                            this.props.currencySymbol.map(currency =>
-                                <Dropdown.Item 
-                                id="currencySymb0l"
-                                key={currency.key} 
-                                onSelect={this.handleInputChange.bind(this)}
-                                onChange={this.handleSubmission.bind(this)}
-                                 
-                                >
-                                {currency.id}
-                                </Dropdown.Item>
+    render() {
+        const {currencySymbols} = this.props
+        const selectedCurrency = currencySymbols.find(
+            (currency) => currency.id === this.state.selectedCurr
+        )
+
+        return (
+            <Container>
+                <Card variant="primary">
+                    <Card.Body>
+                        <Card.Title>{titleApp}</Card.Title>
+                        <Card.Text>{desc}</Card.Text>
+                        <Dropdown>
+                            <Dropdown.Toggle variant="danger">
+                                Select Currency
+                            </Dropdown.Toggle>
+                             {/* Specifying eventKey to compare the currency against the selectedCurr state var. */}
+                            <Dropdown.Menu>
+                                {currencySymbols.map((currency) => (
+                                    <Dropdown.Item
+                                        id="currencySymb0l"
+                                        key={'c' + currency.id}
+                                        eventKey={currency.id}
+                                        onSelect={(eventKey) => {
+                                            this.setState({
+                                                selectedCurr: eventKey,
+                                            })
+                                        }}
+                                    >
+                                        <p> {currency.id} </p>
+                                    </Dropdown.Item>
+                                ))}
+                            </Dropdown.Menu>
+
+                            {selectedCurrency && (
+                                <p>Selected currency: {selectedCurrency.id} </p>
                             )}
-                        </Dropdown.Menu>
-                        
-                       <p>Selected currency: {this.state.currencySymbol} </p> 
-                </Dropdown>  
-                <FormControl></FormControl>
-                    <Button onClick={this.handleCalc} variant="danger" size="sm" id="convertClick">Convert</Button>
-                    
+                        </Dropdown>
+
+
+                    <FormControl>
+                        </FormControl>
+                        <Button
+                            onClick={this.handleCalc}
+                            variant="danger"
+                            size="sm"
+                            id="convertClick"
+                        >
+                            Convert
+                        </Button>
                     </Card.Body>
-            </Card>
-        </Container>
-       );
+                </Card>
+            </Container>
+        )
     }
-    
 }
 
-export default Conversion;
+export default Conversion
