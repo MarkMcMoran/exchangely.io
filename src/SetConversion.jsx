@@ -15,7 +15,7 @@ useEffect(() => {
         const response  = await fetch (baseURL);
         const Currency = await response.json();
         setCurrencies(Currency);
-        console.log(Currency.rates);
+
     }
  //Extracts json array from Object.
     const ratesArray = currencies.rates
@@ -26,7 +26,7 @@ useEffect(() => {
     : [];
 
     return ( 
-        <Conversion currencySymbol={ratesArray}/>
+        <Conversion currencySymbols={ratesArray}/>
     )
 }
 
