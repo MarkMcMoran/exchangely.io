@@ -1,5 +1,4 @@
 import React from 'react';
-import {render } from 'react-dom';
 
 import './App.css';
 import SetConversion from './SetConversion';
@@ -14,5 +13,5 @@ class App extends React.Component{
   }
 };
 
-render(<App />, window.document.getElementById('root'));
+//render(<App />, window.document.getElementById('root'));
 export default App;
