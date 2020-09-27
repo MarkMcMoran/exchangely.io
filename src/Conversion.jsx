@@ -71,8 +71,7 @@ export class Conversion extends React.Component {
                                                 key={'c' + currency.id}
                                                 eventKey={currency.id}
                                                 onSelect={(eventKey) => {
-                                                    {/* Sets  state to selected option.*/
-                                                    }
+                                                    {/* Sets  state to selected option.*/ }
                                                     this.setState({
                                                         selectedCurr: eventKey,
                                                     })
@@ -89,7 +88,7 @@ export class Conversion extends React.Component {
                                             {
                                                 selectedCurrency.rate * this.state.currVal > 0 &&
                                                 <span>
-                                             €{this.state.currVal} will get you {this.state.selectedCurr} {selectedCurrency.rate * this.state.currVal}
+                                             €{this.state.currVal} will get you {this.state.selectedCurr} {(selectedCurrency.rate * this.state.currVal).toFixed(2)}
                                            </span>
 
                                             }</p>
