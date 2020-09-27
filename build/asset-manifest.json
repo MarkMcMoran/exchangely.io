@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/exchangely.io/static/css/main.36375d16.chunk.css",
-    "main.js": "/exchangely.io/static/js/main.8170b381.chunk.js",
-    "main.js.map": "/exchangely.io/static/js/main.8170b381.chunk.js.map",
+    "main.css": "/exchangely.io/static/css/main.3311cd8c.chunk.css",
+    "main.js": "/exchangely.io/static/js/main.f2c22539.chunk.js",
+    "main.js.map": "/exchangely.io/static/js/main.f2c22539.chunk.js.map",
     "runtime-main.js": "/exchangely.io/static/js/runtime-main.0e580cba.js",
     "runtime-main.js.map": "/exchangely.io/static/js/runtime-main.0e580cba.js.map",
     "static/css/2.8aa5a7f8.chunk.css": "/exchangely.io/static/css/2.8aa5a7f8.chunk.css",
     "static/js/2.1ee1b565.chunk.js": "/exchangely.io/static/js/2.1ee1b565.chunk.js",
     "static/js/2.1ee1b565.chunk.js.map": "/exchangely.io/static/js/2.1ee1b565.chunk.js.map",
     "index.html": "/exchangely.io/index.html",
-    "precache-manifest.21a3e98f990bebdf46b1a2982e88b57c.js": "/exchangely.io/precache-manifest.21a3e98f990bebdf46b1a2982e88b57c.js",
+    "precache-manifest.d950aa87487ace0780731d5f2c59c929.js": "/exchangely.io/precache-manifest.d950aa87487ace0780731d5f2c59c929.js",
     "service-worker.js": "/exchangely.io/service-worker.js",
     "static/css/2.8aa5a7f8.chunk.css.map": "/exchangely.io/static/css/2.8aa5a7f8.chunk.css.map",
-    "static/css/main.36375d16.chunk.css.map": "/exchangely.io/static/css/main.36375d16.chunk.css.map",
+    "static/css/main.3311cd8c.chunk.css.map": "/exchangely.io/static/css/main.3311cd8c.chunk.css.map",
     "static/js/2.1ee1b565.chunk.js.LICENSE.txt": "/exchangely.io/static/js/2.1ee1b565.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0e580cba.js",
     "static/css/2.8aa5a7f8.chunk.css",
     "static/js/2.1ee1b565.chunk.js",
-    "static/css/main.36375d16.chunk.css",
-    "static/js/main.8170b381.chunk.js"
+    "static/css/main.3311cd8c.chunk.css",
+    "static/js/main.f2c22539.chunk.js"
   ]
 }
