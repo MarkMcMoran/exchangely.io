@@ -16,19 +16,29 @@ export class Conversion extends React.Component {
         }
         this.handleSubmission = this.handleSubmission.bind(this)
     }
-    formHandler = (event) => {
-        event.preventDefault();
-        alert("You are submitting " + this.state.currVal);
+
+    clearFields = () =>{
+        // Clear the state on button click, and clear input field
+
+        this.setState(
+            {
+            selectedCurr: "",
+            currVal: ""
+            });
+        document.getElementById("currencyCalcForm").reset();
 
     }
 
+
     handleSubmission = (event) => {
+        event.preventDefault();
         this.setState(
             {
                 currVal: event.target.value
-            } );
+            }
+        );
 
-        console.log(this.state)
+
     }
 
 
@@ -45,7 +55,7 @@ export class Conversion extends React.Component {
                     <Card.Body>
                         <Card.Title>{titleApp}</Card.Title>
                         <Card.Text>{desc}</Card.Text>
-                        <Form onSubmit={this.formHandler}>
+                        <Form id="currencyCalcForm" onSubmit={this.handleSubmission}>
                             <Dropdown>
 
                                 <Dropdown.Toggle variant="danger">
@@ -74,10 +84,15 @@ export class Conversion extends React.Component {
 
                                 {selectedCurrency && (
                                     <>
-                                        <p>Todays rate: {selectedCurrency.id} {selectedCurrency.rate} per €1</p>
+                                        <p>Today's rate: {selectedCurrency.id} {selectedCurrency.rate} per €1</p>
                                         <p>
-                                       €{this.state.currVal} will get you {selectedCurrency.id}{ selectedCurrency.rate * this.state.currVal }
-                                        </p>
+                                            {
+                                                selectedCurrency.rate * this.state.currVal > 0 &&
+                                                <span>
+                                             €{this.state.currVal} will get you {this.state.selectedCurr} {selectedCurrency.rate * this.state.currVal}
+                                           </span>
+
+                                            }</p>
                                     </>
 
                                 )}
@@ -85,17 +100,24 @@ export class Conversion extends React.Component {
                             </Dropdown>
 
                             <Form.Label>Currency </Form.Label>
-                            <FormControl id={"inputCurr"} placeholder="Enter value to convert " onChange={this.handleSubmission}>
+                            <FormControl
+                                id={"inputCurr"}
+                                placeholder={"Enter value to convert"}
+                                as={"input"}
+                                onChange={this.handleSubmission}
+                                type={"number"}
+                                min={"1"}
+                            >
 
                             </FormControl>
                             <Button
-
                                 variant="danger"
                                 size="md"
                                 id="convertClick"
                                 type="submit"
+                                onClick={this.clearFields}
                             >
-                                Convert
+                                Clear
                             </Button>
                         </Form>
                     </Card.Body>
