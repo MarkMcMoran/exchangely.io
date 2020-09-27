@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a83c6fbbe25405ec6cb751aa2515936",
+    "revision": "aa0b16cf71e323d92be6b3f6c1cbf81a",
     "url": "/exchangely.io/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/exchangely.io/static/css/2.8aa5a7f8.chunk.css"
   },
   {
-    "revision": "a7b85eeba8b60d9b3fe6",
-    "url": "/exchangely.io/static/css/main.a9899e91.chunk.css"
+    "revision": "423cd2dee834e7f453ba",
+    "url": "/exchangely.io/static/css/main.7a5c4b28.chunk.css"
   },
   {
     "revision": "641f9c6cd251bd623afb",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/exchangely.io/static/js/2.1ee1b565.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a7b85eeba8b60d9b3fe6",
-    "url": "/exchangely.io/static/js/main.baea5da3.chunk.js"
+    "revision": "423cd2dee834e7f453ba",
+    "url": "/exchangely.io/static/js/main.0579b15f.chunk.js"
   },
   {
     "revision": "5c1e028262e60435fc9b",
