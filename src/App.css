@@ -36,9 +36,6 @@
     transform: rotate(360deg);
   }
 }
-.convertClick{
-size: 50px
-}
 #inputCurr  {
   margin: auto;
   width: 20%;
