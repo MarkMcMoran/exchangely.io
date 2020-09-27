@@ -17,13 +17,13 @@ export class Conversion extends React.Component {
         this.handleSubmission = this.handleSubmission.bind(this)
     }
 
-    clearFields = () =>{
+    clearFields = () => {
         // Clear the state on button click, and clear input field
 
         this.setState(
             {
-            selectedCurr: "",
-            currVal: ""
+                selectedCurr: "",
+                currVal: ""
             });
         document.getElementById("currencyCalcForm").reset();
 
@@ -50,36 +50,36 @@ export class Conversion extends React.Component {
 
 
         return (
-            <Container>
+            <Container id="wrapper">
                 <Card variant="primary">
                     <Card.Body>
                         <Card.Title>{titleApp}</Card.Title>
                         <Card.Text>{desc}</Card.Text>
                         <Form id="currencyCalcForm" onSubmit={this.handleSubmission}>
-                            <Dropdown>
 
+                            <Dropdown>
                                 <Dropdown.Toggle variant="danger">
                                     Select Currency
                                 </Dropdown.Toggle>
                                 {/* Specifying eventKey to compare the currency against the selectedCurr state var. */}
-                                <Dropdown.Menu>
-                                    {currencySymbols.map((currency) => (
-                                        <Dropdown.Item
-                                            id="currencySymb0l"
-                                            key={'c' + currency.id}
-                                            eventKey={currency.id}
-                                            onSelect={(eventKey) => {
-                                                {/* Sets  state to selected option.*/
-                                                }
-                                                this.setState({
-                                                    selectedCurr: eventKey,
-                                                })
 
-                                            }}
-                                        >
-                                            <p> {currency.id} </p>
-                                        </Dropdown.Item>
-                                    ))}
+                                <Dropdown.Menu>
+                                    <div id="dropdown-div">
+                                        {currencySymbols.map((currency) => (
+                                            <Dropdown.Item
+                                                id="currencySymb0l"
+                                                key={'c' + currency.id}
+                                                eventKey={currency.id}
+                                                onSelect={(eventKey) => {
+                                                    {/* Sets  state to selected option.*/
+                                                    }
+                                                    this.setState({
+                                                        selectedCurr: eventKey,
+                                                    })
+                                                }}>
+                                                <p> {currency.id} </p>
+                                            </Dropdown.Item>))}
+                                    </div>
                                 </Dropdown.Menu>
 
                                 {selectedCurrency && (
@@ -96,7 +96,6 @@ export class Conversion extends React.Component {
                                     </>
 
                                 )}
-
                             </Dropdown>
 
                             <Form.Label>Currency </Form.Label>
