@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/exchangely.io/static/css/main.a9899e91.chunk.css",
+    "main.js": "/exchangely.io/static/js/main.baea5da3.chunk.js",
+    "main.js.map": "/exchangely.io/static/js/main.baea5da3.chunk.js.map",
+    "runtime-main.js": "/exchangely.io/static/js/runtime-main.0e580cba.js",
+    "runtime-main.js.map": "/exchangely.io/static/js/runtime-main.0e580cba.js.map",
+    "static/css/2.8aa5a7f8.chunk.css": "/exchangely.io/static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.1ee1b565.chunk.js": "/exchangely.io/static/js/2.1ee1b565.chunk.js",
+    "static/js/2.1ee1b565.chunk.js.map": "/exchangely.io/static/js/2.1ee1b565.chunk.js.map",
+    "index.html": "/exchangely.io/index.html",
+    "precache-manifest.984ccc424c7dc3df98a1d76576b01cef.js": "/exchangely.io/precache-manifest.984ccc424c7dc3df98a1d76576b01cef.js",
+    "service-worker.js": "/exchangely.io/service-worker.js",
+    "static/css/2.8aa5a7f8.chunk.css.map": "/exchangely.io/static/css/2.8aa5a7f8.chunk.css.map",
+    "static/css/main.a9899e91.chunk.css.map": "/exchangely.io/static/css/main.a9899e91.chunk.css.map",
+    "static/js/2.1ee1b565.chunk.js.LICENSE.txt": "/exchangely.io/static/js/2.1ee1b565.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e580cba.js",
+    "static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.1ee1b565.chunk.js",
+    "static/css/main.a9899e91.chunk.css",
+    "static/js/main.baea5da3.chunk.js"
+  ]
+}
