@@ -8,3 +8,5 @@ React based Exchange rate conversion app pulling data from [Exchange Rates API](
 npm install react
 npm install react-bootstrap bootstrap
 ```
+
+Try it for yourself: ![Exchangely.io](https://markmcmoran.github.io/exchangely.io/)
